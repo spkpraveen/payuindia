@@ -7,7 +7,7 @@ module PayuIndia
   mattr_accessor :production_url
 
   self.test_url = 'https://test.payu.in/_payment.php'
-  self.production_url = 'https://secure.payu.in/_payment.php'
+  self.production_url = 'https://test.payu.in/_payment.php'
 
   def self.service_url
     defined?(Rails) && Rails.env == 'production' ? self.production_url : self.test_url
